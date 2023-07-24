@@ -10,26 +10,30 @@
 </head>
 <body>
 <nav class="container-fluid">
+
 	<ul>
-		<li><strong>Web Portal Quick documentation</strong></li>
+		<li class="brand">
+			<img src="dolibarr_logo.svg" >
+		</li>
+		<li >
+			<strong>Web Portal Quick documentation</strong>
+		</li>
+	</ul>
+
+	<ul>
+
 	</ul>
 
 	<ul>
 		<li>
-			<a href="#">Menu link</a>
+			<a href="./new-elements-docs.php">New elements doc</a>
 		</li>
 		<li>
-			<a href="#">Menu link</a>
+			<a aria-activedescendant="" href="./page-example.php">Page example</a>
 		</li>
 		<li>
-			<a href="#">Menu link</a>
-		</li>
-		<li>
-			<a href="#">Menu link</a>
-		</li>
-		<li>
-			<a href="#">Menu link</a>
+			<a href="./login.php">login exemple</a>
 		</li>
 	</ul>
 </nav>
-<main class="container" >
+

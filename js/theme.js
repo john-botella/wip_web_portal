@@ -9,4 +9,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
+	// Disable double click on some elements and add loading icon
+	document.body.addEventListener('click', (event) => {
+		if (!event.target.matches('[busy-on-click]')) return;
+
+		if(event.target.getAttribute('busy-on-click') == 'true'){
+			event.target.setAttribute('aria-busy', 'true');
+		}
+	});
+
 });
