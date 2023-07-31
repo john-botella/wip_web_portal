@@ -1,47 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
-
-:root{
-    /* you can try diferent color for hue*/
-    /* red : 0
-    *	 yellow : 60
-    *	 green : 120
-    *	 azure : 180
-    *	 blue : 240
-    *	 purple : 280
-    */
-    --primary-color-hue : 280;
-    --primary-color-saturation : 35%;
-    --primary-color-lightness : 50%;
-    --primary-color : hsl(var(--primary-color-hue), var(--primary-color-saturation), var(--primary-color-lightness));
-
-    --form-border-color: #D1D1D4;
-    --form-border-color-hover: hsl(var(--primary-color-hue), var(--primary-color-saturation), 50%);
-    --form-icon-color: hsl(var(--primary-color-hue), var(--primary-color-saturation), 50%);
 
 
-    /* Use image or Linear background */
-    --background : linear-gradient(
-            90deg,
-            hsl(var(--primary-color-hue), var(--primary-color-saturation), 70%),
-            hsl(var(--primary-color-hue), var(--primary-color-saturation), 90%)
-    );
-
-    /* comment this var to remove image and see adaptative linear background */
-    --background : rgba(0,0,0,0.4) url("https://images.unsplash.com/photo-1552526408-fa252623b415?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MDEyNzJ8MHwxfHNlYXJjaHwxNnx8cHVycGxlJTIwZmxvd2VyfGVufDB8MHx8fDE2ODc5NDY5NjB8MA&ixlib=rb-4.0.3&q=80&w=1080&w=1920");
-
-
-}
-
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Raleway, sans-serif;
-}
-
-body {
-    background: var(--background);
+body.login-page {
+    background: var(--login-background);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -49,14 +9,14 @@ body {
     background-blend-mode: darken
 }
 
-.container {
+.login-page__container {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
 }
 
-.screen {
+.login-screen {
     background: linear-gradient(
             90deg,
             hsl(var(--primary-color-hue), var(--primary-color-saturation), 80%,0.8),
@@ -67,16 +27,17 @@ body {
     position: relative;
     height: 600px;
     width: 360px;
+    overflow: hidden;
     box-shadow: 0px 0px 24px hsl(var(--primary-color-hue), var(--primary-color-saturation), 30%,0.4);
 }
 
-.screen__content {
+.login-screen__content {
     z-index: 1;
     position: relative;
     height: 100%;
 }
 
-.screen__background {
+.login-screen__background {
     position: absolute;
     top: 0;
     left: 0;
@@ -87,12 +48,12 @@ body {
     clip-path: inset(0 0 0 0);
 }
 
-.screen__background__shape {
+.login-screen__background__shape {
     transform: rotate(45deg);
     position: absolute;
 }
 
-.screen__background__shape1 {
+.login-screen__background__shape1 {
     height: 520px;
     width: 520px;
     background: #FFF;
@@ -101,7 +62,7 @@ body {
     border-radius: 0 72px 0 0;
 }
 
-.screen__background__shape2 {
+.login-screen__background__shape2 {
     height: 220px;
     width: 220px;
     background: hsl(var(--primary-color-hue), 31%, 53%);
@@ -110,7 +71,7 @@ body {
     border-radius: 32px;
 }
 
-.screen__background__shape3 {
+.login-screen__background__shape3 {
     height: 540px;
     width: 190px;
     background: linear-gradient(
@@ -125,7 +86,7 @@ body {
     border-radius: 32px;
 }
 
-.screen__background__shape4 {
+.login-screen__background__shape4 {
     height: 400px;
     width: 200px;
     background: hsl(var(--primary-color-hue), var(--primary-color-saturation), 55%);
@@ -148,15 +109,16 @@ body {
 .login__icon {
     position: absolute;
     top: 30px;
-    color: var(--form-icon-color);
+    left: 5px;
+    color: var(--login-form-icon-color);
 }
 
-.login__input {
+input.login__input {
+    --border-radius: 0;
     border: none;
-    border-bottom: 2px solid var(--form-border-color);
+    border-bottom: 2px solid var(--login-form-border-color);
     background: none;
-    padding: 10px;
-    padding-left: 24px;
+    padding: 10px 10px 10px 24px;
     font-weight: 700;
     width: 75%;
     transition: .2s;
@@ -166,7 +128,7 @@ body {
 .login__input:focus,
 .login__input:hover {
     outline: none;
-    border-bottom-color: var(--form-border-color-hover);
+    border-bottom-color: var(--login-form-border-color-hover);
 }
 
 .login__submit {
@@ -181,7 +143,7 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
-    color: var(--primary-color);
+    color: var(--primary);
     box-shadow: 0px 2px 2px hsl(var(--primary-color-hue), var(--primary-color-saturation),30%, 0.2);
     cursor: pointer;
     transition: .2s;
@@ -190,14 +152,14 @@ body {
 .login__submit:active,
 .login__submit:focus,
 .login__submit:hover {
-    border-color: var(--primary-color);
+    border-color: var(--primary);
     outline: none;
 }
 
 .button__icon {
     font-size: 24px;
     margin-left: auto;
-    color: var(--primary-color);
+    color: var(--primary);
 }
 
 .social-login {
@@ -220,7 +182,7 @@ body {
     padding: 20px 10px;
     color: #fff;
     text-decoration: none;
-    text-shadow: 0px 0px 8px var(--primary-color);
+    text-shadow: 0px 0px 8px var(--primary);
 }
 
 .social-login__icon:hover {

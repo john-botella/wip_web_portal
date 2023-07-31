@@ -5,13 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Demo</title>
-	<link rel="stylesheet" href="../css/login.css">
+	<link rel="stylesheet" href="../css/global.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 </head>
-<body>
-<div class="container">
-	<div class="screen">
-		<div class="screen__content">
+<body class="login-page">
+<div class="login-page__container">
+	<div class="login-screen">
+		<div class="login-screen__content">
 			<form class="login">
 				<div class="login__field">
 					<i class="login__icon fas fa-user"></i>
@@ -27,7 +27,7 @@
 				</button>
 			</form>
 			<div class="social-login">
-				<h3>log in via</h3>
+				<span class="social-login__title">log in via</span>
 				<div class="social-icons">
 					<a href="#" class="social-login__icon fab fa-instagram"></a>
 					<a href="#" class="social-login__icon fab fa-facebook"></a>
@@ -35,11 +35,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="screen__background">
-			<span class="screen__background__shape screen__background__shape4"></span>
-			<span class="screen__background__shape screen__background__shape3"></span>
-			<span class="screen__background__shape screen__background__shape2"></span>
-			<span class="screen__background__shape screen__background__shape1"></span>
+		<div class="login-screen__background">
+			<span class="login-screen__background__shape login-screen__background__shape4"></span>
+			<span class="login-screen__background__shape login-screen__background__shape3"></span>
+			<span class="login-screen__background__shape login-screen__background__shape2"></span>
+			<span class="login-screen__background__shape login-screen__background__shape1"></span>
 		</div>
 	</div>
 </div>

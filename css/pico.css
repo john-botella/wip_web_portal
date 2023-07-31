@@ -221,8 +221,12 @@ kbd {
     --h6-color: #4d606d;
     --muted-color: hsl(205, 10%, 50%);
     --muted-border-color: hsl(205, 20%, 94%);
-    --primary: hsl(195, 85%, 41%);
-    --primary-hover: hsl(195, 90%, 32%);
+
+    --primary-color-hue : 200;
+    --primary-color-saturation : 45%;
+    --primary-color-lightness : 50%;
+    --primary : hsl(var(--primary-color-hue), var(--primary-color-saturation), var(--primary-color-lightness));
+    --primary-hover: hsl(var(--primary-color-hue), 90%, 32%);
     --primary-focus: rgba(16, 149, 193, 0.125);
     --primary-inverse: #fff;
     --secondary: hsl(205, 15%, 41%);
@@ -319,6 +323,21 @@ kbd {
     --nav-border-color: var(--table-border-color);
 
     color-scheme: light;
+
+
+    /** login */
+    --login-form-border-color: #D1D1D4;
+    --login-form-border-color-hover: hsl(var(--primary-color-hue), var(--primary-color-saturation), 50%);
+    --login-form-icon-color: hsl(var(--primary-color-hue), var(--primary-color-saturation), 50%);
+    /* Use image or Linear background */
+    --login-background : linear-gradient(
+            90deg,
+            hsl(var(--primary-color-hue), var(--primary-color-saturation), 70%),
+            hsl(var(--primary-color-hue), var(--primary-color-saturation), 90%)
+    );
+    /* comment this var to remove image and see adaptative linear background */
+    --login-background : rgba(0,0,0,0.4) url("https://images.unsplash.com/photo-1552526408-fa252623b415?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MDEyNzJ8MHwxfHNlYXJjaHwxNnx8cHVycGxlJTIwZmxvd2VyfGVufDB8MHx8fDE2ODc5NDY5NjB8MA&ixlib=rb-4.0.3&q=80&w=1080&w=1920");
+    --login-background : rgba(0,0,0,0.4) url("https://images.unsplash.com/photo-1609607224685-44a36db58b10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&w=1920");
 }
 
 /*@media only screen and (prefers-color-scheme: dark) {*/
