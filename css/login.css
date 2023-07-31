@@ -96,10 +96,21 @@ body.login-page {
 }
 
 .login {
+    --login-logo-height:64px;
+    --login-form-offset:156px;
+
     width: 320px;
     padding: 30px;
-    padding-top: 156px;
+    padding-top: calc(var(--login-form-offset) - var(--login-logo-height));
 }
+
+.login__logo{
+    height: 64px;
+    background: var(--login-logo, transparent);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 
 .login__field {
     padding: 20px 0px;
